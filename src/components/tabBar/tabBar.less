@@ -1,0 +1,50 @@
+.tab_bar_por{
+    position: relative;
+    width: 100%;
+    height: 1.3rem;
+    
+    
+
+
+    .tab_bar{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1.3rem;
+        background: #fff;
+        border-top: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        a{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100%;
+            i{
+                color: #666;
+                font-size: .5rem;
+            }
+            span{
+                color: #666;
+                font-size: .3rem;
+            }
+    
+            // 激活态
+            &.router-link-exact-active{
+                i{
+                    color: var(--themeColor);
+                    font-size: .5rem;
+                }
+                span{
+                    color: var(--themeColor);
+                    font-size: .3rem;
+                }
+            }
+        }
+    }
+    
+}

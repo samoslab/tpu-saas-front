@@ -1,0 +1,83 @@
+.geren{
+    background: var(--bgColor);
+    .nav_bar{
+        margin-bottom: 1rem;
+    }
+
+    .geren_info{
+        border-top-left-radius: .3rem;
+        border-top-right-radius: .3rem;
+        background: #fff;
+        width: 100%;
+        overflow: hidden;
+        // 头像 用户名 电话
+        .geren_info_title{
+            border-bottom: 10px solid var(--bdColor);
+            padding: 0.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .avatar{
+                width: 1rem;
+                height: 1rem;
+            }
+            .description{
+                padding: 0 0.3rem;
+                .tel{
+                    color: #999;
+                }
+            }
+        }
+
+        // 账单 TPU会员 总资产 余额 余额宝 等导航
+        .nav{
+            border-bottom: 10px solid var(--bdColor);
+            .van-cell{
+                .iconfont{
+                    padding: 0.1rem;
+                    border-radius: 50%;
+                    color: var(--themeColor);
+                    background: var(--qianlan);
+                }
+                .custom-title{
+                    padding: 0 0.3rem;
+                }
+
+                .r{
+                    color: rgb(255, 80, 100);
+                    background: rgb(250,192,199);
+                }
+                .y{
+                    color: rgb(255, 181, 46);
+                    background: rgb(255,230,185);
+                }
+                .g{
+                    color: rgb(25, 214, 114);
+                    background: rgb(188,246,185);
+                }
+                .p{
+                    color: purple;
+                    background: rgb(230,200,250);
+                }
+                .q{
+                    color: rgb(255, 0, 170);
+                    background: rgb(243, 158, 239);
+                }
+            }
+        }
+        
+    }
+      // 红包广场
+      .guard{
+        border-top: .1rem;
+        width: 100%;
+        min-height: 4rem;
+        padding-bottom: 2rem;
+        .plaza_title{
+            padding: 0.1rem;
+            font-weight: 600;
+        }
+    }
+
+    
+}

@@ -1,0 +1,218 @@
+.liaotian{
+    width: 100%;
+    height: 100%;
+    background: var(--bdColor);
+    display: flex;
+    flex-direction: column;
+
+
+    // 聊天区域
+    .content_wrap{
+        width: 100%;
+        overflow: hidden;
+        flex: 1;
+        
+        // 包裹这层 为了滚动
+        .content_scroll{
+            padding: 0.1rem;
+            // 共有样式
+            .item{
+                width: 100%;
+                padding-bottom: .1rem;
+                display: flex;
+                // 头像
+                .avatar{
+                    width: 10%;
+                    height: 10vw;
+                    border-radius: .1rem;
+                }
+
+                // 用户名+聊天内容
+                .item_info{
+                    padding: 0 1rem 0 .2rem;
+                    // 用户名
+                    .user_name{
+                        color: #999;
+                    }
+                    // 聊天内容
+                    .msg{
+                        background: #fff;
+                        padding: .15rem;
+                        border-radius: .15rem;
+                        border-top-left-radius: 0;
+                    }
+                    // 图片内容
+                    .img_msg{
+                        width: 100%;
+                        border-radius: .15rem;
+                    }
+                    // 转账 红包
+                    .transfer,.hongbao{
+                        // 转账的黄色区域
+                        border-radius: .2rem;
+                        border-top-left-radius: 0;
+                        overflow: hidden;
+                        width: 4.5rem;    // 转账 和 红包 定死宽度吧
+                        .y{
+                            display: flex;
+                            align-items: center;
+                            background: #f39800;
+                            padding: 0.3rem;
+                            .iconfont.icon-fukuan{
+                                color: #f7af37;
+                                font-size: 1rem;
+                            }
+                            .iconfont.icon-hongbao{
+                                color: red;
+                                font-size: 1.2rem;
+                            }
+                            .y_info{
+                                color: #fff;
+                                display: flex;
+                                flex-direction: column;
+                                padding: 0 .2rem 0 .2rem;
+                            }
+                        }
+                        // 转账的白色底
+                        .w{
+                            color: #999;
+                            background: #fff;
+                            padding: 0.1rem;
+                        }
+                    }
+                }
+
+                &.me{
+                    flex-direction: row-reverse;
+                    // 用户名+聊天内容
+                    .item_info{
+                        padding: 0 .2rem 0 1rem;
+                        // 用户名
+                        .user_name{
+                            text-align: right;
+                        }
+                        // 聊天内容
+                        .msg{
+                            background: #8eec77;
+                            border-radius: .15rem;
+                            border-top-right-radius: 0;
+                        }
+                        // 转账 红包
+                        .transfer,.hongbao{
+                            border-radius: .15rem;
+                            border-top-right-radius: 0;
+                        }
+                    }
+                }
+
+
+            }
+
+            // 公共模块
+            .public{
+                display: flex;
+                justify-content: center;
+                span{
+                    background: #aaa;
+                    color: #ffffff;
+                    padding: 0.05rem .1rem;
+                    border-radius: .1rem;
+                }
+            }
+
+            // text聊天文本
+        }
+
+
+    }
+
+
+
+
+
+    // 文字编辑区  加号 发送
+    .edit_por{
+        width: 100%;
+        position: relative;
+        // height: 1.2rem;
+        .edit{
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+
+
+            
+            .edit_content{
+                width: 100%;
+                height: 1.2rem;
+                display: flex;
+                align-items: center;
+                padding: 0 0.1rem;
+                .van-field{
+                    width: 75%;
+                    border: 1px solid #dcdddf;
+                    padding: .15rem;
+                    border-radius: .2rem;
+                }
+
+                // 这里是 右下角的 加号 和 小飞机
+                .van-icon,.iconfont.icon-fasong{
+                    color: #a3a5a9;
+                    font-size: .8rem;
+                }
+            }
+
+            // 点击加号之后 展开的 发图区域
+            .add{
+                width: 100%;
+                height: 1.8rem;
+                // background: var(--bdColor);
+                background-color:white;
+                padding: 0.2rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                .item{
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 0.2rem;
+                    align-items: center;
+                    .van-uploader,.transfer{
+                        width: 1rem;
+                        height: 1rem;
+                        background: #fff;
+                        border-radius: .1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .van-icon,.iconfont{
+                            font-size: .5rem;
+                        }
+                        // 展区 红包颜色
+                        .iconfont.icon-hongbao{
+                            color: red;
+                        }
+                        // 展区 转账颜色
+                        .van-icon.van-icon-refund-o{
+                            color: gold;
+                        }
+                        // 展区 照片颜色
+                        .van-icon.van-icon-photo-o{
+                            color: green;
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+
+        
+    }
+
+
+}

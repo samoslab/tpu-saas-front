@@ -1,0 +1,93 @@
+.home{
+    font-size: .3rem;
+  
+
+    // 扫一扫 付钱 收钱 财富 (蓝色区域)
+    .title{
+        width: 100%;
+        height: 3rem;
+        
+        background: var(--bgColor);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            
+            .iconfont{
+                font-size: 0.6rem;
+                padding-bottom: .2rem;
+            }
+            span,.iconfont{
+                color: #ffffff;
+            }
+        }
+        
+     }
+  
+
+    // 红包... 12个选项
+    .nav{
+        border-top: 1px solid var(--bdColor);
+        border-left: 1px solid var(--bdColor);
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        a{
+            width: 25%;
+            border-bottom: 1px solid var(--bdColor);
+            border-right: 1px solid var(--bdColor);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: .1rem 0;
+            .iconfont{
+                font-size: 0.7rem;
+                color: #000;
+                margin: .3rem 0;
+            }
+            
+            .icon-hongbao{
+                color: red;
+            }
+            .icon-faxian{
+                color: var(--themeColor);
+            }
+            span{
+                color: #666;
+            }
+            .active {
+                color: black;
+            }
+            .inactive {
+                color: gray;
+            }
+        }
+    }
+
+    // 红包广场
+    .about{
+        border-top: .2rem solid var(--bdColor);
+        width: 100%;
+        min-height: 1.6rem;
+        padding-bottom: 1rem;
+        .about_title{
+            padding: 0.2rem;
+            font-weight: 600;
+        }
+        .about_content{
+             padding-left: 0.5rem;
+            font-weight: 600;
+        }
+    }
+  
+    .active {
+        color: red;
+    
+    }
+}

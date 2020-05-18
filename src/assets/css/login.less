@@ -1,0 +1,126 @@
+.c-reg-box {
+    height: 100vh;
+    overflow: hidden;
+    background: #000000;
+    font-size: 0.32rem;
+    color: #ffffff;
+    background: url(../../assets/imgs/login/login-bg.png) no-repeat top left;
+    background-size: cover;
+
+    .c-reg-nav {
+        width: 6rem;
+        margin: 0.8rem auto 1.2rem;
+        display: flex;
+
+        &>div {
+            flex: 1;
+            text-align: center;
+
+            &>a {
+                color: #837d7d;
+                display: block;
+                cursor: pointer;
+                padding: .1rem 0;
+                position: relative;
+
+                &.active {
+                    color: #ffffff;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 80%;
+                        transform: translateX(-50%);
+                        border-top: solid 2px #E73C32;
+                    }
+                }
+            }
+        }
+    }
+
+    .c-reg-btn {
+        border: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1rem;
+        color: #ffffff;
+        background: #d21d2e;
+        font-size: 0.32rem;
+    }
+}
+
+.c-reg-panel {
+    width: 5.6rem;
+    background: #1e1010;
+    margin: 0 auto .2rem;
+    padding: 0.4rem 0.4rem 0;
+
+    &>li {
+        display: flex;
+        border-bottom: solid 1px #1d1a1f;
+        margin-bottom: 0.2rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &>.c-reg-panel-leftbox {
+            flex: 1;
+
+            label {
+                color: #cacaca;
+                display: block;
+                text-align: left;
+                font-size: 0.28rem;
+                margin-bottom: 0.1rem;
+            }
+
+            input {
+                display: block;
+                border: none;
+                background: transparent;
+                outline: none;
+                height: 0.7rem;
+                line-height: 0.7rem;
+                width: 100%;
+                color: #ffffff;
+                margin-bottom: 0.1rem;
+                font-size: 0.3rem;
+            }
+        }
+
+        &>.c-reg-panel-rightbox {
+            line-height: 0.9rem;
+            min-width: 0.4rem;
+
+            img {
+                width: 0.4rem;
+                height: 0.4rem;
+            }
+
+            .c-reg-code {
+                color: #cacaca;
+                font-size: 0.28rem;
+
+                &[disabled] {
+                    color: #504f4f;
+                }
+            }
+        }
+    }
+}
+
+.c-reg-toreg {
+    width: 5.6rem;
+    margin: 0 auto;
+    text-align: right;
+
+    a {
+        color: #FFFFFF;
+        font-size: 14px;
+    }
+}

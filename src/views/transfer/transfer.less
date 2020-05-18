@@ -1,0 +1,64 @@
+.transfer{
+    background: var(--bdColor);
+    min-height: 100vh;
+
+
+    // 转账给 朋友 账户 银行卡
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: .5rem;
+        a{
+            height: 1rem;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.2rem;
+            color: #000;
+            .router_text{
+                .iconfont{
+                    margin-right: .3rem;
+                    color: var(--themeColor);
+                    border-radius: 50%;
+                    padding: 0.1rem;
+                    background: #C8DEFF;
+                }
+            }
+        }
+    }
+
+    // 最近
+    .recently{
+        .recently_title{
+            padding: 0.2rem;
+            color: #999;
+        }
+        a{
+            border-bottom: 1px solid #eee;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.2rem;
+            color: #000;
+            .router_text{
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: .3rem;
+                    border-radius: 50%;
+                    width: .6rem;
+                    height: .6rem;
+                }
+                .user_info{
+                    .user_tel{
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+}

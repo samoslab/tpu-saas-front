@@ -1,0 +1,154 @@
+{
+    "policy": {
+        "levels": {
+            "0": {
+                "uplinkOnly": 0
+            }
+        }
+    },
+    "dns": {
+        "servers": [
+            "localhost"
+        ]
+    },
+    "outboundDetour": [
+        {
+            "tag": "direct",
+            "protocol": "freedom",
+            "settings": {}
+        }
+    ],
+    "inbound": {
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "settings": {
+            "ip": "127.0.0.1",
+            "auth": "noauth",
+            "udp": true
+        },
+        "port": 1081
+    },
+    "inboundDetour": [
+        {
+            "port": 1080,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "allocate": {
+                "refresh": 5,
+                "strategy": "always",
+                "concurrency": 3
+            },
+            "tag": "httpDetour",
+            "streamSettings": {},
+            "domainOverride": [
+                "http",
+                "tls"
+            ],
+            "settings": {
+                "timeout": 0
+            }
+        }
+    ],
+    "log": {
+        "error": "\/var\/folders\/92\/51zsrt190wn7xlq924skvywr0000gn\/T\/cenmrev.v2rayx.log.F98C8625-90A7-477D-9098-9F8B4FBE531A\/error.log",
+        "loglevel": "info",
+        "access": "\/var\/folders\/92\/51zsrt190wn7xlq924skvywr0000gn\/T\/cenmrev.v2rayx.log.F98C8625-90A7-477D-9098-9F8B4FBE531A\/access.log"
+    },
+    "routing": {
+        "strategy": "rules",
+        "settings": {
+            "domainStrategy": "IPIfNonMatch",
+            "rules": [
+                {
+                    "type": "field",
+                    "outboundTag": "direct",
+                    "domain": [
+                        "localhost",
+                        "domain:mzstatic.com",
+                        "domain:me.com",
+                        "domain:lookup-api.apple.com",
+                        "domain:itunes.com",
+                        "domain:itunes.apple.com",
+                        "domain:icloud-content.com",
+                        "domain:icloud.com",
+                        "domain:cdn-apple.com",
+                        "domain:apple-cloudkit.com",
+                        "domain:apple.com",
+                        "domain:apple.co",
+                        "domain:aaplimg.com",
+                        "domain:guzzoni.apple.com"
+                    ]
+                },
+                {
+                    "type": "field",
+                    "outboundTag": "direct",
+                    "ip": [
+                        "geoip:private"
+                    ]
+                }
+            ]
+        }
+    },
+    "outbound": {
+        "sendThrough": "0.0.0.0",
+        "mux": {
+            "enabled": false,
+            "concurrency": 8
+        },
+        "protocol": "vmess",
+        "settings": {
+            "vnext": [
+                {
+                    "address": "45.76.212.220",
+                    "port": 8888,
+                    "users": [
+                        {
+                            "id": "a6a59a94-2cca-405f-9125-cf3e1ffa0b05",
+                            "alterId": 68,
+                            "security": "auto",
+                            "level": 0
+                        }
+                    ],
+                    "remark": "aff"
+                }
+            ]
+        },
+        "streamSettings": {
+            "wsSettings": {
+                "path": "",
+                "headers": {
+                    "Host": "server.cc"
+                }
+            },
+            "tlsSettings": {
+                "serverName": "server.cc",
+                "allowInsecure": false
+            },
+            "httpSettings": {
+                "path": "",
+                "host": [
+                    "server.cc"
+                ]
+            },
+            "tcpSettings": {
+                "header": {
+                    "type": "none"
+                }
+            },
+            "kcpSettings": {
+                "header": {
+                    "type": "none"
+                },
+                "mtu": 1350,
+                "congestion": false,
+                "tti": 20,
+                "uplinkCapacity": 5,
+                "writeBufferSize": 1,
+                "readBufferSize": 1,
+                "downlinkCapacity": 20
+            },
+            "network": "tcp",
+            "security": "none"
+        }
+    }
+}

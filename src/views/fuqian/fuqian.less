@@ -1,0 +1,95 @@
+.fuqian{
+    background: var(--bgColor);
+    .nav_bar{
+        margin-bottom: 1rem;
+    }
+
+    .pay{
+        border-top-left-radius: .3rem;
+        border-top-right-radius: .3rem;
+        background: #fff;
+        width: 100%;
+        overflow: hidden;
+
+        // 账户余额
+        .balance{
+            padding: .4rem;
+            border-bottom: 1px solid var(--bdColor);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .balance_left{
+                display: flex;
+                align-items: center;
+                .iconfont{
+                    font-size: 0.6rem;
+                    color: var(--themeColor);
+                }
+                span{
+                    padding: 0 0.2rem;
+                }
+            }
+        }
+
+        // 转出地址 数量 支付类型 button 等内容
+        .content{
+            padding: 0.6rem;
+            .item{
+                .item_title{
+                    padding: 0.2rem 0;
+                }
+                .address_title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .address_title_book{
+                        color: #999;
+                    }
+                }
+
+                // 输入框
+                .van-field,.van-dropdown-menu {
+                    background: #efefef;
+                    border-radius: .2rem;
+                    height: 1rem;
+                }
+                .van-dropdown-menu{
+                    &/deep/ .van-dropdown-menu__title{
+                        color: #999;
+                        width: 94%;
+                    }
+                    
+                }
+            }
+          
+        }
+        .localpay {
+            padding: 0.8rem;
+            margin: 0 auto;
+        }
+    }
+
+    // 支付 弹出层
+    .van-popup{
+        // 内容
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.3rem .8rem;
+
+            // 输入密码框
+            .van-field{
+                background: #efefef;
+                border-radius: .2rem;
+            }
+        }
+
+        
+
+        .y_button{
+            margin-bottom: 1rem;
+        }
+    }
+    
+}

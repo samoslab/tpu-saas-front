@@ -1,0 +1,92 @@
+{
+    "code": 0,
+    "msg": "",
+    "result": {
+        "token_set": [
+            {
+                "name": "Samos",
+                "token": "SAMO",
+                "precision": 3,
+                "icon": "http://s.yqkkn.com/samo.png",
+                "amount": "154716.291",
+                "frozen": "123.4",
+                "price": { "cny": 0.05, "usdt": 0.1 },
+                "cny": 7735.81455,
+                "usdt": 15471.6291,
+                "frozen_cny": 6.170000000000001,
+                "frozen_usdt": 12.340000000000002
+            },
+            {
+                "name": "Haicoin",
+                "token": "HAI",
+                "precision": 3,
+                "icon": "http://s.yqkkn.com/haicoin.png",
+                "amount": "0",
+                "frozen": "0",
+                "price": { "cny": 2, "usdt": 0.1 },
+                "cny": 0,
+                "usdt": 0,
+                "frozen_cny": 0,
+                "frozen_usdt": 0
+            },
+            {
+                "name": "Galtcoin",
+                "token": "GALT",
+                "precision": 3,
+                "icon": "http://s.yqkkn.com/galtcoin.png",
+                "amount": "10.0",
+                "frozen": "0",
+                "price": { "cny": 3, "usdt": 0.1 },
+                "cny": 30,
+                "usdt": 1,
+                "frozen_cny": 0,
+                "frozen_usdt": 0
+            },
+            {
+                "name": "NULS",
+                "token": "NULS",
+                "precision": 3,
+                "icon": "http://s.yqkkn.com/nuls2.png",
+                "amount": "0.52",
+                "frozen": "0E-14",
+                "price": { "cny": 3, "usdt": 0.1 },
+                "cny": 1.56,
+                "usdt": 0.052000000000000005,
+                "frozen_cny": 0,
+                "frozen_usdt": 0
+            },
+            {
+                "name": "TPUChain",
+                "token": "TPU",
+                "precision": 3,
+                "icon": "http://s.yqkkn.com/tpu.png",
+                "amount": "494.95",
+                "frozen": "0.05",
+                "price": { "cny": 0.1, "usdt": 0.05 },
+                "cny": 49.495000000000005,
+                "usdt": 24.747500000000002,
+                "frozen_cny": 0.005000000000000001,
+                "frozen_usdt": 0.0025000000000000005
+            },
+            {
+                "name": "Gkicoin",
+                "token": "GKI",
+                "precision": 3,
+                "icon": "http://s.hgeekl.com/img/gki_logo.png",
+                "amount": "184.476072",
+                "frozen": "801.516",
+                "price": { "cny": "0.01496", "usdt": "0.0022" },
+                "cny": 2.75976203712,
+                "usdt": 0.4058473584,
+                "frozen_cny": 11.99067936,
+                "frozen_usdt": 1.7633352
+            }
+        ],
+        "summary": {
+            "total_amount_cny": 7819.629,
+            "total_amount_usdt": 15497.834,
+            "total_amount_frozen_cny": 18.166,
+            "total_amount_frozen_usdt": 14.106
+        }
+    }
+}
