@@ -10,15 +10,7 @@ import { yRoutes } from "./yRoutes.js";
 const routes = [
 
 
-    {
-        path: "/plaza",
-        name: "plaza",
-        component: () =>
-            import(/* webpackChunkName: "plaza" */ "../views/plaza/plaza.vue"),
-        meta: {
-            requiresAuth: needRequiresAuth
-        }
-    },
+
     {
         path: "/openredpkt",
         name: "openredpkt",
@@ -103,24 +95,7 @@ const routes = [
         //   requiresAuth: true
         // }
     },
-    //活动
-    {
-        path: "/events",
-        name: "events",
-        component: () => import("../views/my-menu/activity/index.vue")
-        // meta: {
-        //   requiresAuth: true
-        // }
-    },
-    //活动详情
-    {
-        path: "/showactivity",
-        name: "showactivity",
-        component: () => import("../views/my-menu/activity/showactivity.vue")
-        // meta: {
-        //   requiresAuth: true
-        // }
-    },
+
 
 
     ...yRoutes,
